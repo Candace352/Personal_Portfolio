@@ -4,78 +4,212 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Personal Portfolio</title>
+        <title>Candace Tariro Hunzwi - Portfolio</title>
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/1f064cd1e4.js" crossorigin="anonymous"></script>
+        <style>
+            /* Add these styles to your existing CSS */
+            .skills-list {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+                margin-top: 50px;
+            }
+            
+            .experience-timeline {
+                margin-top: 50px;
+            }
+            
+            .experience-item {
+                background: #fff;
+                padding: 30px;
+                margin-bottom: 30px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                transition: transform 0.5s;
+                position: relative;
+            }
+            
+            .btn {
+    display: inline-block;
+    background: #ff004f;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    background: #005792;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.btn i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+            .experience-item:hover {
+                transform: translateY(-10px);
+            }
+            
+            .experience-item h2 {
+                color: white;
+                font-size: 24px;
+                margin-bottom: 5px;
+            }
+            
+            .experience-item h3 {
+                color: white;
+                font-size: 18px;
+                margin-bottom: 15px;
+                font-weight: 500;
+            }
+            
+            .experience-date {
+                display: block;
+                color: #ff004f;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            
+            .experience-item ul {
+                padding-left: 20px;
+            }
+            
+            .experience-item li {
+                margin-bottom: 10px;
+                position: relative;
+                padding-left: 20px;
+            }
+            
+            .experience-item li:before {
+                content: "▹";
+                position: absolute;
+                left: 0;
+                color: #ff004f;
+            }
+            
+            .layer a {
+                display: none;
+            }
+            
+            .work:hover .layer {
+                height: 100%;
+            }
+            .skill-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.5s;
+    position: relative;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+
+.skill-card h2 {
+    color: white;
+    font-size: 20px;
+    margin: 15px 0 5px;
+}
+
+.skill-card h3 {
+    color: #ff004f;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.skill-card ul {
+    padding-left: 20px;
+}
+
+.skill-card li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.skill-card li:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #ff004f;
+}
+
+.skill-card i {
+    font-size: 40px;
+    color: #ff004f;
+}
+        </style>
     </head>
     <body>
-       <div id ="header">
-        <div class = "container">
+       <div id="header">
+        <div class="container">
             <nav>
-                <img src = "images/try.png" class="logo">
+                <img src="images/try.png" class="logo">
                 <ul>
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#portfolio">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
-                <!-- <i class="fa-solid fa-xmark"></i> -->
                 </ul>
-                <!-- <i class="fa-solid fa-bars"></i>  -->
-
             </nav>
             <div class="header-text">
-                <p>Software Engineer</p>
-                <h1>Hi, I'm <span>Candace</span> <br> from Ashesi University</h1>
-
+                <p>Computer Science | Machine Learning Researcher</p>
+                <h1>Hi, I'm <span>Candace Tariro Hunzwi</span> <br>Mastercard Foundation Scholar at Ashesi University</h1>
             </div>
-
         </div>
        </div>
 
        <div id="about">
         <div class="container">
-            <div class ="row">
+            <div class="row">
                 <div class="about-col-1">
-                    <img src = "images/Candace Tariro Hunzwi Headshot.jpg">
+                    <img src="images/Candace Tariro Hunzwi Headshot.jpg">
                 </div>
                 <div class="about-col-2">
-                    <h1 class ="sub-title">About Me</h1>
-                        <p>I am Candace, a final-year Computer Science student with a passion for machine learning and AI research. 
-                        My goal is to leverage technology to drive impactful solutions, especially in areas like sign language translation for low-resource languages in Africa. 
-                        With a solid foundation in programming languages like Python, C, and Java, I am skilled in both software development and research. 
-                        My work is driven by a desire to ensure that technological advancements are inclusive and beneficial to everyone. 
-                        Currently, I am exploring opportunities to contribute to research and development projects that align with my passion for innovation and social good.</p>
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a final-year Computer Science student specializing in Machine Learning and AI research with a passion for developing inclusive technologies. My work focuses on bridging communication gaps through innovative solutions like sign language translation for low-resource African languages and developing NLP tools for indigenous languages.</p>
+                    <p>As a Dean's List scholar and Mastercard Foundation Scholar Program recipient, I combine academic excellence with practical experience in software engineering, research, and quality assurance. My goal is to leverage technology to create impactful solutions that address real-world challenges in emerging markets.</p>
 
-                    <div class = "tab-titles">
-                        <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class = "tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class = "tab-links"onclick="opentab('education')">Education</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class = "tab-contents active-tab" id="skills">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Machine Learning & AI Research</span><br>Proficient in developing algorithms and models that enable machines to learn from data.</li>
-                            <li><span>Natural Language Processing (NLP)</span><br>Skilled in creating systems that can understand and generate human language.</li>
-                            <li><span>Frontend Development</span><br>Experienced in creating user-friendly web applications with a focus on intuitive design and responsiveness</li>
-                            <li><span>Quality Assurance & Testing</span><br>Knowledgeable in quality assurance processes, having interned at Econet Wireless Zimbabwe.</li>
-                            <li><span>Software Development</span><br>Experienced in software development with a strong background in Python, Java, and Flutter.</li>
-                            
+                            <li><span>Machine Learning & AI</span><br>NLP, Deep Learning, Computer Vision, LLM Fine-tuning, TensorFlow, PyTorch, Transformers</li>
+                            <li><span>Software Engineering</span><br>Agile Methodologies, CI/CD, Unit Testing, RESTful APIs, Cloud Computing</li>
+                            <li><span>Data Science</span><br>Pandas, NumPy, Data Visualization, SQL Query Optimization, Big Data Processing</li>
+                            <li><span>Full-Stack Development</span><br>Flutter, React, JavaScript, HTML/CSS, Node.js, Firebase</li>
+                            <li><span>Quality Assurance</span><br>Test Automation, Test Case Design, Software Testing Methodologies</li>
                         </ul>
                     </div>
-                    <div class = "tab-contents"id="experience">
+                    <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>December 2023 - February 2024</span><br>Corporate VC & Business Analytics Remote Extern at HP Tech Ventures </li>
-                            <li><span>June 2023 - September 2023</span><br>Research Software Engineer Fellow  at Princeton University</li>
-                            <li><span>May 2023 - July 2023</span><br>Quality Assurance Engineer Intern at Econet Wireless Zimbabwe</li>
-                            <li><span>Quality Assurance & Testing</span><br>Machine Learning & Web Development Intern at Fixed Byte</li>
-                           
+                            <li><span>Corporate VC & Business Analytics Extern</span><br>HP Tech Ventures | Dec 2023 - Feb 2024<br>Analyzed 20+ datasets to inform investment strategies and recommended 5 startups for due diligence</li>
+                            <li><span>Research Software Engineer Fellow</span><br>Princeton University | Jun 2023 - Sep 2023<br>Enhanced Nasdaq TotalView-ITCH.jl package with improved error handling and 23.6% increased test coverage</li>
+                            <li><span>Quality Assurance Engineer Intern</span><br>Econet Wireless Zimbabwe | Sep 2023 - Nov 2023<br>Improved product reliability by 10% and reduced production bugs by 15% through rigorous testing</li>
                         </ul>
                     </div>
-                    <div class = "tab-contents" id="education">
+                    <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2022 - 2025 </span><br>Bachelor of Science in  Computer Science at Ashesi University.</li>
-                            <li><span>2019 - 2020</span><br>Advanced Levels at Zengeza 2 High</li>
-                            <li><span>2016 - 2018 </span><br>Ordinary Levels at Girls High School Harare</li>                            
+                            <li><span>Bachelor of Science in Computer Science</span><br>Ashesi University | 2022-2025<br>Dean's List 2022-2023, 2024/2025 | Mastercard Foundation Scholar</li>
+                            <li><span>Advanced Levels</span><br>Zengeza 2 High | 2019-2020</li>
+                            <li><span>Ordinary Levels</span><br>Girls High School Harare | 2016-2018</li>
                         </ul>
                     </div>
                 </div>
@@ -84,138 +218,166 @@
        </div>
 
        <div id="skills">
-        <div class = "container">
-            <h1 class="sub-title">My Skills</h1>
+        <div class="container">
+            <h1 class="sub-title">Technical Expertise</h1>
             <div class="skills-list">
-                <div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-brain"></i>
+                    <h2>Machine Learning & AI</h2>
+                    <p>Specialized in NLP, Deep Learning, and Computer Vision with expertise in TensorFlow, PyTorch, and Hugging Face transformers. Experience in LLM fine-tuning and developing AI solutions for low-resource languages.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Data Science</h2>
+                    <p>Proficient in data analysis, visualization, and processing large datasets using Python (Pandas, NumPy). Experience with SQL optimization and deriving actionable insights from complex data.</p>
+                </div>
+                <div class="skill-card">
                     <i class="fa-solid fa-code"></i>
                     <h2>Software Engineering</h2>
-                    <p>Possess a strong foundation in software engineering principles and methodologies, including Agile practices. Prioritize effective project management and continuous improvement throughout the software development lifecycle.</p>
-                    <a href="#">Learn More</a>
+                    <p>Strong foundation in software development principles, Agile methodologies, and CI/CD pipelines. Experience with unit testing, code reviews, and maintaining high code quality standards.</p>
                 </div>
-                <div>
-                    <i class="fa-solid fa-chalkboard"></i>
-                    <h2>Machine Learning</h2>
-                    <p>Skilled in machine learning algorithms and frameworks, with experience in TensorFlow, PyTorch, and scikit-learn. Proficient in data preprocessing with NumPy and pandas, and familiar with deploying models on Google Cloud AI.</p>
-                    <a href="#">Learn More</a>
+                <div class="skill-card">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <h2>Mobile Development</h2>
+                    <p>Skilled in Flutter development for cross-platform mobile applications. Experience with Firebase integration, state management, and creating responsive UIs.</p>
                 </div>
-                <div>
-                    <i class="fa-brands fa-uncharted"></i>
-                    <h2>Software Testing and Quality Assurance</h2>
-                    <p>Experienced in software testing methodologies, utilizing tools like Jira and Swagger to conduct rigorous testing and ensure high-quality deliverables.</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                    <i class="fa-brands fa-webflow"></i>
+                <div class="skill-card">
+                    <i class="fa-solid fa-globe"></i>
                     <h2>Web Development</h2>
-                    <p>Experienced in HTML/CSS for frontend development and backend services with Node.js, ensuring responsive and dynamic web applications.</p>
-                    <a href="#">Learn More</a>
+                    <p>Full-stack development experience with React, Node.js, and RESTful APIs. Proficient in HTML/CSS, JavaScript, and modern frontend frameworks.</p>
                 </div>
-                <div>
-                    <i class="fa-brands fa-researchgate"></i>
-                    <h2>Research and Development</h2>
-                    <p>Engaged in R&D projects, focusing on innovative solutions and improvements, including developing a grammar and spell checker for the Shona language.</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                    <i class="fa-brands fa-app-store-ios"></i>
-                    <h2>Mobile App Development</h2>
-                    <p>Developed mobile applications using Flutter, with an emphasis on creating user-friendly interfaces and robust backend systems.</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-language"></i>
-                    <h2>Programming Languages</h2>
-                    <p>Proficient in Python and Java with experience in C and Dart. Excel at developing applications and algorithms, employing best practices for code efficiency and readability.</p>
-                    <a href="#">Learn More</a>
+                <div class="skill-card">
+                    <i class="fa-solid fa-cloud"></i>
+                    <h2>Cloud Computing</h2>
+                    <p>Experience with Google Cloud Platform, serverless architectures, and deploying machine learning models in cloud environments.</p>
                 </div>
             </div>
-
         </div>
        </div>
 
+       <!-- Experience Section -->
+    <!-- Experience Section -->
+<div id="experience">
+    <div class="container">
+        <h1 class="sub-title">Professional Experience</h1>
+        <div class="skills-list">  <!-- Changed from experience-timeline to skills-list -->
+            <!-- Experience Item 1 -->
+            <div class="skill-card">  <!-- Changed from experience-item to skill-card -->
+                <i class="fa-solid fa-building-columns"></i>  <!-- Added icon -->
+                <h2>Corporate VC & Business Analytics Extern</h2>
+                <h3>HP Tech Ventures | Dec 2023 - Feb 2024</h3>  
+                <ul>
+                    <li>Processed and analyzed 20+ large datasets using OpenRefine, Excel, and SQL</li>
+                    <li>Developed interactive market maps and visualizations</li>
+                    <li>Conducted in-depth research on startup metrics and business models</li>
+                </ul>
+            </div>
+            
+            <!-- Experience Item 2 -->
+            <div class="skill-card">
+                <i class="fa-solid fa-university"></i>
+                <h2>Research Software Engineer Fellow</h2>
+                <h3>Princeton University | Jun 2023 - Sep 2023</h3>
+                <ul>
+                    <li>Enhanced Nasdaq TotalView-ITCH.jl package with version 5.0 support</li>
+                    <li>Increased unit test coverage by 23.6%</li>
+                    <li>Optimized logging mechanisms, reducing debugging time by 20%</li>
+                </ul>
+            </div>
+            
+            <!-- Experience Item 3 -->
+            <div class="skill-card">
+                <i class="fa-solid fa-signal"></i>
+                <h2>Quality Assurance Engineer Intern</h2>
+                <h3>Econet Wireless Zimbabwe | Sep 2023 - Nov 2023</h3>
+                <ul>
+                    <li>Improved product reliability by 10% through testing</li>
+                    <li>Reduced production bugs by 15%</li>
+                    <li>Implemented automated logging and CI/CD testing</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
-       
-
-    <!--My Projects-->
-    <div id ="portfolio">
+       <div id="portfolio">
         <div class="container">
-            <h1 class="sub-title">My Work</h1>
+            <h1 class="sub-title">Research & Projects</h1>
             <div class="work-list">
-                <div class="work">
-                    <img src="images/work-1.png">
-                    <div class="layer">
-                        <h3>1Village App</h3>
-                        <p>A mobile platform for asset sharing that enables users to rent, share, or sell personal items, either for a fee or for free.</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <!-- <div class="work">
-                    <img src="images/work-2.png">
-                </div> -->
-                <div class="work">
-                    <img src="images/work-3.png">
-                    <div class="layer">
-                        <h3>Job Compatibility Checker</h3>
-                        <p>An AI-powered tool that lets recruiters upload job descriptions and applicant resumes in PDF format. It analyzes the content to provide a similarity score and ranks the resumes based on their alignment with the job requirements.</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
                 <div class="work">
                     <img src="images/shona.gif">
                     <div class="layer">
                         <h3>Shona Grammar and Spell Checker</h3>
-                        <p>A Shona grammar and spell checker that identifies, highlights, and corrects grammatical, spelling, and punctuation errors for improved writing clarity.</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        <p>Developed an NLP tool for the Shona language with advanced error detection and correction capabilities. Partnered with linguists to improve pattern recognition.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/popp.png">
+                    <div class="layer">
+                        <h3>Multilingual Sign Language Dataset</h3>
+                        <p>Curating and annotating a dataset aligning English with Ghanaian and American Sign Language videos to support translation and generation tasks.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>1Village Sharing Platform</h3>
+                        <p>Mobile platform for asset sharing that enables users to rent, share, or sell personal items. Developed with Flutter and Firebase.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Job Compatibility Checker</h3>
+                        <p>AI-powered tool that analyzes job descriptions and resumes to provide similarity scores and rankings. Uses NLP and machine learning.</p>
                     </div>
                 </div>
                 <div class="work">
                     <img src="images/iii.jpg">
                     <div class="layer">
                         <h3>Nasdaq TotalView-ITCH Package</h3>
-                        <p>Enhanced version 5.0 of the TotalViewITCH.jl package to efficiently process Nasdaq TotalView data for academic research.</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        <p>Enhanced Julia package for processing Nasdaq TotalView data, adding support for version 5.0 and improving reliability for academic research.</p>
                     </div>
                 </div>
             </div>
-            <a href="#" class="tbn">See More</a>
-
+            <a href="https://github.com/Candace352" class="btn" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> View All Projects on GitHub
+            </a>
+              
         </div>
-    </div>
+       </div>
 
-    <div id="contact">
+       <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i>candace.hunzwi@gmail.com / candace.hunzwi@ashesi.edu.gh </p>
-                    <p><i class="fa-solid fa-square-phone"></i>+233 500 571727/ +263 774 239586</p>
+                    <p><i class="fa-solid fa-paper-plane"></i> candace.hunzwi@gmail.com / candace.hunzwi@ashesi.edu.gh</p>
+                    <p><i class="fa-solid fa-square-phone"></i> +233 500 571727 / +263 774 239586</p>
                     <div class="social-icons">
-                        <a href="www.linkedin.com/in/candacehunzwi"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/candacehunzwi"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://x.com/Candace0352"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://github.com/yourusername"><i class="fa-brands fa-github"></i></a>
                     </div>
-                    <a href="images/Candace Tariro Hunzwi Software Engineering Resume" download class="tbn btn2">Download My Resume</a>
-                    
+                    <a href="images/Candace Tariro Hunzwi Resume.pdf" download class="btn btn2">Download Full Resume</a>
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="tbn btn2">Submit</button>
-
+                        <button type="submit" class="btn btn2">Send Message</button>
                     </form>
                     <span id="msg"></span>
                 </div>
-
             </div>
         </div>
         <div class="copyright">
-            <p>Copyright © Candace. Made with <i class="fa-solid fa-heart"></i> </p>
+            <p>Copyright © 2024 Candace Tariro Hunzwi. Made with <i class="fa-solid fa-heart"></i></p>
         </div>
-    </div>
+       </div>
     
-    <script>
+       <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
     
@@ -223,35 +385,31 @@
             for (tablink of tablinks) {
                 tablink.classList.remove("active-link");
             }
-
             for (tabcontent of tabcontents) {
                 tabcontent.classList.remove("active-tab");
             }
-
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         } 
-    </script>
+       </script>
 
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbw9e0CE8l8BZVAfzo1uSTLzkH02wSNy9QQl2xOIUhMc5yHNRc3U3CZXwUpwRYfTMvQ/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg= document.getElementById("msg")
+       <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw9e0CE8l8BZVAfzo1uSTLzkH02wSNy9QQl2xOIUhMc5yHNRc3U3CZXwUpwRYfTMvQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
   
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message submitted successfully!"
-            setTimeout(function(){
-                msg.innerHTML = ""
-             }, 5000)
-            })
-            form.reset()
-  
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message submitted successfully!"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
         })
-        .catch(error => console.error('Error!', error.message))
-  </script>
-        
+       </script>
     </body>
 </html>
