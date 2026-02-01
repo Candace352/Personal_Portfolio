@@ -284,6 +284,7 @@ nav ul li a:hover::after{
 
 }
 
+
 .work:hover .layer{
     height:100%;
 }
@@ -392,6 +393,18 @@ form .btn2{
     margin-top: -40px;
     display: block;
 }
+
+.about-text {
+    max-width: 900px;
+    line-height: 1.7;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+
 /* CSS for smaller screens */
 
 
